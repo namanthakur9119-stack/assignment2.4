@@ -1,0 +1,141 @@
+# Assignment 2.4 — HTML Validation & Debugging
+
+## Q1. Take a sample HTML file containing missing closing tags, incorrect nesting, and missing attributes.
+
+**Answer:**
+
+The following HTML code contains intentional errors.
+
+### Before: Buggy HTML Code
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Webpage</title>
+<body>
+    <h1>Welcome to My Website
+    <p>This is my first paragraph.
+    <div>
+        <p>Learn HTML <strong>and CSS</p></strong>
+    </div>
+    <img src="profile.jpg">
+    <a href="https://example.com">Visit Website
+</body>
+</html>
+```
+
+## Q2. Identify the errors in the HTML code.
+
+**Answer:**
+
+The following errors were identified:
+
+1. The `<head>` element is not closed before the `<body>` element begins.
+2. The `<h1>` heading is missing its closing `</h1>` tag.
+3. The first `<p>` element is missing its closing `</p>` tag.
+4. The `<strong>` element is closed after the paragraph, creating incorrect nesting.
+5. The `<img>` element is missing the `alt` attribute.
+6. The `<a>` element is missing its closing `</a>` tag.
+7. The code does not consistently follow proper indentation.
+8. The `<html>` element does not specify the document language.
+
+## Q3. Inspect the HTML using the Elements panel in browser DevTools.
+
+**Answer:**
+
+Steps to inspect the HTML:
+
+1. Open the HTML file in Google Chrome.
+2. Right-click anywhere on the webpage.
+3. Select **Inspect**.
+4. Open the **Elements** panel.
+5. Examine the HTML elements and their nesting.
+6. Identify missing elements, incorrect nesting, and unexpected DOM structures.
+
+The browser may automatically correct some HTML errors when constructing the DOM. Therefore, the Elements panel should be used alongside the original source code.
+
+## Q4. Check the HTML markup using an HTML validation tool.
+
+**Answer:**
+
+I used the W3C Markup Validation Service to check the HTML code.
+
+Website: https://validator.w3.org/
+
+Steps:
+
+1. Open the W3C Markup Validation Service.
+2. Select the option to validate by direct input.
+3. Paste the HTML code into the input box.
+4. Click **Check**.
+5. Review the reported errors and warnings.
+6. Correct the markup and validate it again.
+
+## Q5. Fix all errors and properly indent the HTML code.
+
+**Answer:**
+
+### After: Corrected HTML Code
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Webpage</title>
+</head>
+<body>
+    <h1>Welcome to My Website</h1>
+
+    <p>This is my first paragraph.</p>
+
+    <div>
+        <p>Learn HTML <strong>and CSS</strong></p>
+    </div>
+
+    <img src="profile.jpg" alt="Profile picture">
+
+    <a href="https://example.com">Visit Website</a>
+</body>
+</html>
+```
+
+### Corrections Made
+
+* Added the missing `</head>` tag.
+* Added the missing `</h1>` tag.
+* Added the missing `</p>` tag.
+* Corrected the nesting of the `<strong>` element.
+* Added the `alt` attribute to the image.
+* Added the missing `</a>` tag.
+* Added `lang="en"` to the `<html>` element.
+* Added character encoding and viewport metadata.
+* Improved indentation and readability.
+
+Note: The image `profile.jpg` must exist in the correct folder for the image to display.
+
+## Q6. What is the difference between the before and after code?
+
+**Answer:**
+
+The before code contained missing closing tags, incorrect element nesting, and a missing image alt attribute. The after code has the correct HTML structure, properly nested elements, meaningful image alternative text, and consistent indentation.
+
+## Q7. How do you verify that the fixed webpage works correctly?
+
+**Answer:**
+
+1. Save the corrected code in `index.html`.
+2. Open the file in the browser using Live Server.
+3. Check that the heading, paragraph, text, image area, and link appear correctly.
+4. Right-click the webpage and select **Inspect** to examine the DOM.
+5. Submit the corrected HTML to the W3C validator.
+6. Review any remaining errors or warnings and correct them where necessary.
+7. Take a screenshot of the fixed webpage.
+
+## Q8. What is the conclusion of this assignment?
+
+**Answer:**
+
+In this assignment, I learned how to identify and fix common HTML errors, including missing closing tags, incorrect nesting, and missing attributes. I inspected the HTML structure using browser DevTools and checked the markup with the W3C validation tool. Finally, I corrected the code and improved its indentation and readability.
